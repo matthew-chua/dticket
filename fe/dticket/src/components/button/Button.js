@@ -13,9 +13,9 @@ function Button(props) {
     const reverse = "opacity-95 px-4 py-2 rounded-md font-bold hover:opacity-100 text-rose-400 bg-white"
 
     const noReverse = "opacity-95 px-4 py-2 rounded-md font-bold hover:opacity-100 text-white bg-rose-400"
-    console.log(styles)
+    // console.log(styles)
     return ( 
-        <button className={props.reverse ? reverse:noReverse}>
+        <button className={`${props.x} ${props.reverse ? reverse:noReverse}`}>
             <div>{props.text}</div>
         </button>
      );
