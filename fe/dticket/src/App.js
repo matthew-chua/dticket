@@ -5,6 +5,10 @@ import Button from './components/button/Button';
 import Card from './components/card/Card';
 import adele from "./assets/adele.png"
 import LandingPage from './pages/LandingPage';
+import VerifyPage from './pages/VerifyPage';
+import ProfilePage from './pages/ProfilePage';
+import EventPage from './pages/EventPage';
+import EventsPage from './pages/EventsPage';
 function App() {
   return (
     <div className="App">
@@ -12,9 +16,10 @@ function App() {
       <div />
       <Switch>
         <Route path="/" element={<LandingPage/>} />
-        <Route path="/post/:postid" element={<div/>} />
-        <Route path="/user/:username" element={<div />} />
-        <Route path="/search/:type=:keyword" element={<div />} />
+        <Route path="/verify" element={<VerifyPage/>} />
+        <Route path="/profile" element={<ProfilePage/>} />
+        <Route path="/events/" element={<EventsPage/>} />
+        <Route path="/events/:eventID" element={<EventPage/>} />
       </Switch>
     </Router>
     </div>
