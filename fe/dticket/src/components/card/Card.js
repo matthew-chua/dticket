@@ -1,9 +1,7 @@
-import { Link } from "react-router-dom"; 
-
 function Card(props) {
     
     return ( 
-        <Link to="/event" className="box-content h-72 my-4 bg-white rounded-2xl flex flex-col justify-start items-center shadow-lg shadow-gray-800 hover:shadow-gray-300 cursor-pointer">
+        <div className="box-content h-72 my-4 bg-white rounded-2xl flex flex-col justify-start items-center shadow-lg shadow-gray-800 hover:shadow-gray-300 cursor-pointer">
             <img src={props.img} className="box-content h-48 w-full rounded-t-2xl"/>
             <div className="w-full py-1 px-3">
                 <div className="w-full flex flex-row justify-between text-base">
@@ -19,7 +17,7 @@ function Card(props) {
                 </div>
 
             </div>
-        </Link>
+        </div>
      );
 }
 
