@@ -13,10 +13,8 @@ contract ERC721 is IERC721, IERC721Metadata, Context, ERC165{
     using Address for address;
     using Strings for uint256;
 
-    // Token name
+    // Token name and symbol
     string private _name;
-
-    // Token symbol
     string private _symbol;
 
     // Mother address
@@ -31,7 +29,9 @@ contract ERC721 is IERC721, IERC721Metadata, Context, ERC165{
     // Mapping owner address to tokens array
     mapping(address => uint256[]) private _tokens;
 
-    // Mapping from token ID to approved address: list of approvers for specific token
+    // Mapping from token ID to approved address: list of who is approved to take a token
+    // when the owner or the approved address calls transferFrom, the contract checks if that msg.sender is 
+    // the owner or is approved by the owner to take the token, and if so it transfers the token to him.
     mapping(uint256 => address) private _tokenApprovals;
 
     // Mapping from owner to operator approvals
@@ -43,22 +43,12 @@ contract ERC721 is IERC721, IERC721Metadata, Context, ERC165{
         _mother = mother_;
     }
 
-    function supportsInterface(bytes4 interfaceId) public view virtual override(ERC165, IERC165) returns (bool) {
-        return
-            interfaceId == type(IERC721).interfaceId ||
-            interfaceId == type(IERC721Metadata).interfaceId ||
-            super.supportsInterface(interfaceId);
-    } // ?
-
     // returns token count balance of owner
     function balanceOf(address owner) public view virtual override returns (uint256) {
         require(owner != address(0), "ERC721: balance query for the zero address");
         return _balances[owner];
     }
 
-    /**
-     * @dev See {IERC721-ownerOf}.
-     */
      // return owner address of token
     function ownerOf(uint256 tokenId) public view virtual override returns (address) {
         address owner = _owners[tokenId];
@@ -86,11 +76,7 @@ contract ERC721 is IERC721, IERC721Metadata, Context, ERC165{
         return "";
     }
 
-<<<<<<< Updated upstream
     // approve transfer of token 'tokenId' from owner to 'to' address
-=======
-    // 
->>>>>>> Stashed changes
     function approve(address to, uint256 tokenId) public virtual override {
         address owner = ERC721.ownerOf(tokenId);
         require(to != owner, "ERC721: approval to current owner");
@@ -103,21 +89,16 @@ contract ERC721 is IERC721, IERC721Metadata, Context, ERC165{
         _approve(to, tokenId);
     }
 
-<<<<<<< Updated upstream
     // get list of approvers for specific token
-=======
->>>>>>> Stashed changes
     function getApproved(uint256 tokenId) public view virtual override returns (address) {
         require(_exists(tokenId), "ERC721: approved query for nonexistent token");
 
         return _tokenApprovals[tokenId];
     }
 
-<<<<<<< Updated upstream
     // // Mapping from owner to operator approvals
     // mapping(address => mapping(address => bool)) private _operatorApprovals;
-=======
->>>>>>> Stashed changes
+    // gives operator 'approved' status for msgSender
     function setApprovalForAll(address operator, bool approved) public virtual override {
         require(operator != _msgSender(), "ERC721: approve to caller");
 
@@ -125,6 +106,7 @@ contract ERC721 is IERC721, IERC721Metadata, Context, ERC165{
         emit ApprovalForAll(_msgSender(), operator, approved);
     }
 
+    // returns operator 'approved' status for owner
     function isApprovedForAll(address owner, address operator) public view virtual override returns (bool) {
         return _operatorApprovals[owner][operator];
     }
@@ -134,7 +116,6 @@ contract ERC721 is IERC721, IERC721Metadata, Context, ERC165{
         address to,
         uint256 tokenId
     ) public virtual override {
-        //solhint-disable-next-line max-line-length
         require(_isApprovedOrOwner(_msgSender(), tokenId), "ERC721: transfer caller is not owner nor approved");
 
         _transfer(from, to, tokenId);
@@ -168,6 +149,7 @@ contract ERC721 is IERC721, IERC721Metadata, Context, ERC165{
         require(_checkOnERC721Received(from, to, tokenId, _data), "ERC721: transfer to non ERC721Receiver implementer");
     }
 
+    // returns if token exists
     function _exists(uint256 tokenId) internal view virtual returns (bool) {
         return _owners[tokenId] != address(0);
     }
@@ -273,9 +255,5 @@ contract ERC721 is IERC721, IERC721Metadata, Context, ERC165{
         address to,
         uint256 tokenId
     ) internal virtual {}
-<<<<<<< Updated upstream
-=======
-}
->>>>>>> Stashed changes
 }
 
