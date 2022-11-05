@@ -431,13 +431,8 @@
       }
     },
     "src/ERC721.sol": {
-<<<<<<< Updated upstream
-      "lastModificationDate": 1667627802382,
-      "contentHash": "616cec3ef41dd00f43d39be197819882",
-=======
-      "lastModificationDate": 1667622786658,
-      "contentHash": "942e8211fd9060c07ea83ad3cfc00b7d",
->>>>>>> Stashed changes
+      "lastModificationDate": 1667666415954,
+      "contentHash": "ff62cb23a029734258e265da7c1f3acb",
       "sourceName": "src/ERC721.sol",
       "solcConfig": {
         "settings": {
@@ -469,7 +464,6 @@
       },
       "imports": [
         "lib/openzeppelin-contracts/contracts/token/ERC721/IERC721.sol",
-<<<<<<< Updated upstream
         "lib/openzeppelin-contracts/contracts/token/ERC721/IERC721Receiver.sol",
         "lib/openzeppelin-contracts/contracts/token/ERC721/extensions/IERC721Metadata.sol",
         "lib/openzeppelin-contracts/contracts/utils/Address.sol",
@@ -478,9 +472,6 @@
         "lib/openzeppelin-contracts/contracts/utils/introspection/ERC165.sol",
         "lib/openzeppelin-contracts/contracts/utils/introspection/IERC165.sol",
         "lib/openzeppelin-contracts/contracts/utils/math/Math.sol"
-=======
-        "lib/openzeppelin-contracts/contracts/utils/introspection/IERC165.sol"
->>>>>>> Stashed changes
       ],
       "versionRequirement": "^0.8.13",
       "artifacts": {
@@ -490,13 +481,8 @@
       }
     },
     "src/Factory.sol": {
-<<<<<<< Updated upstream
-      "lastModificationDate": 1667627168142,
-      "contentHash": "a42c142225e14cac7d78e3d1350e7dff",
-=======
-      "lastModificationDate": 1667622799858,
-      "contentHash": "0fd28bcdc4c4c4e72fbdae0d85466d76",
->>>>>>> Stashed changes
+      "lastModificationDate": 1667665801407,
+      "contentHash": "ad66f085ff14bb004726d5838e79ece8",
       "sourceName": "src/Factory.sol",
       "solcConfig": {
         "settings": {
@@ -527,11 +513,6 @@
         }
       },
       "imports": [
-<<<<<<< Updated upstream
-        "lib/openzeppelin-contracts/contracts/token/ERC721/IERC721.sol",
-        "lib/openzeppelin-contracts/contracts/utils/introspection/IERC165.sol"
-=======
-        "lib/openzeppelin-contracts/contracts/token/ERC721/ERC721.sol",
         "lib/openzeppelin-contracts/contracts/token/ERC721/IERC721.sol",
         "lib/openzeppelin-contracts/contracts/token/ERC721/IERC721Receiver.sol",
         "lib/openzeppelin-contracts/contracts/token/ERC721/extensions/IERC721Metadata.sol",
@@ -540,8 +521,9 @@
         "lib/openzeppelin-contracts/contracts/utils/Strings.sol",
         "lib/openzeppelin-contracts/contracts/utils/introspection/ERC165.sol",
         "lib/openzeppelin-contracts/contracts/utils/introspection/IERC165.sol",
-        "lib/openzeppelin-contracts/contracts/utils/math/Math.sol"
->>>>>>> Stashed changes
+        "lib/openzeppelin-contracts/contracts/utils/math/Math.sol",
+        "src/ERC721.sol",
+        "src/Mother.sol"
       ],
       "versionRequirement": "^0.8.13",
       "artifacts": {
@@ -551,13 +533,8 @@
       }
     },
     "src/Marketplace.sol": {
-<<<<<<< Updated upstream
       "lastModificationDate": 1667626417408,
       "contentHash": "e255f8b7edc285715b3336a83af01ed4",
-=======
-      "lastModificationDate": 1667622797115,
-      "contentHash": "a36e07d17623405232ef10b40e3357a0",
->>>>>>> Stashed changes
       "sourceName": "src/Marketplace.sol",
       "solcConfig": {
         "settings": {
@@ -607,13 +584,8 @@
       }
     },
     "src/Mother.sol": {
-<<<<<<< Updated upstream
       "lastModificationDate": 1667626417409,
       "contentHash": "b652211a24ba5394be56e72e519157af",
-=======
-      "lastModificationDate": 1667622619230,
-      "contentHash": "0933b00f15c5cccbdbdecd6277cade98",
->>>>>>> Stashed changes
       "sourceName": "src/Mother.sol",
       "solcConfig": {
         "settings": {
