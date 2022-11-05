@@ -15,7 +15,8 @@ function App() {
   return (
     <div className="App">
     <Router>
-      <NavBar/>
+    <NavBar/>
+
       <Switch>
         <Route path="/" element={<LandingPage/>} />
         <Route path="/verify" element={<VerifyPage/>} />
