@@ -47,6 +47,7 @@ export default function EventsPage() {
             title={event.title}
             time={event.time}
             price={event.price}
+            
           />
         ))}
       </div>

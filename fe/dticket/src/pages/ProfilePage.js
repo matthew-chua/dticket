@@ -49,6 +49,7 @@ export default function ProfilePage() {
               title={event.title}
               time={event.time}
               price={event.price}
+              to = "/profile/ticket"
             />
           ))}
         </div>
@@ -62,6 +63,7 @@ export default function ProfilePage() {
               title={event.title}
               time={event.time}
               price={event.price}
+              to = "/profile/ticket"
             />
           ))}
         </div>
