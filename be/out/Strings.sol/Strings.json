@@ -88,6 +88,7 @@
         "id": 1459,
         "nodeType": "PragmaDirective",
         "src": "101:23:6",
+        "nodes": [],
         "literals": [
           "solidity",
           "^",
@@ -99,6 +100,7 @@
         "id": 1460,
         "nodeType": "ImportDirective",
         "src": "126:25:6",
+        "nodes": [],
         "absolutePath": "lib/openzeppelin-contracts/contracts/utils/math/Math.sol",
         "file": "./math/Math.sol",
         "nameLocation": "-1:-1:-1",
@@ -116,6 +118,7 @@
             "id": 1464,
             "nodeType": "VariableDeclaration",
             "src": "210:54:6",
+            "nodes": [],
             "constant": true,
             "mutability": "constant",
             "name": "_SYMBOLS",
@@ -159,6 +162,7 @@
             "id": 1467,
             "nodeType": "VariableDeclaration",
             "src": "270:43:6",
+            "nodes": [],
             "constant": true,
             "mutability": "constant",
             "name": "_ADDRESS_LENGTH",
@@ -202,10 +206,12 @@
             "id": 1515,
             "nodeType": "FunctionDefinition",
             "src": "415:696:6",
+            "nodes": [],
             "body": {
               "id": 1514,
               "nodeType": "Block",
               "src": "486:625:6",
+              "nodes": [],
               "statements": [
                 {
                   "id": 1513,
@@ -936,10 +942,12 @@
             "id": 1535,
             "nodeType": "FunctionDefinition",
             "src": "1216:174:6",
+            "nodes": [],
             "body": {
               "id": 1534,
               "nodeType": "Block",
               "src": "1290:100:6",
+              "nodes": [],
               "statements": [
                 {
                   "id": 1533,
@@ -1200,10 +1208,12 @@
             "id": 1611,
             "nodeType": "FunctionDefinition",
             "src": "1513:437:6",
+            "nodes": [],
             "body": {
               "id": 1610,
               "nodeType": "Block",
               "src": "1603:347:6",
+              "nodes": [],
               "statements": [
                 {
                   "assignments": [
@@ -2194,10 +2204,12 @@
             "id": 1631,
             "nodeType": "FunctionDefinition",
             "src": "2102:149:6",
+            "nodes": [],
             "body": {
               "id": 1630,
               "nodeType": "Block",
               "src": "2175:76:6",
+              "nodes": [],
               "statements": [
                 {
                   "expression": {

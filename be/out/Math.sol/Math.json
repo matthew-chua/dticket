@@ -77,6 +77,7 @@
         "id": 1670,
         "nodeType": "PragmaDirective",
         "src": "103:23:9",
+        "nodes": [],
         "literals": [
           "solidity",
           "^",
@@ -93,6 +94,7 @@
             "id": 1675,
             "nodeType": "EnumDefinition",
             "src": "221:122:9",
+            "nodes": [],
             "canonicalName": "Math.Rounding",
             "members": [
               {
@@ -124,10 +126,12 @@
             "id": 1693,
             "nodeType": "FunctionDefinition",
             "src": "413:104:9",
+            "nodes": [],
             "body": {
               "id": 1692,
               "nodeType": "Block",
               "src": "480:37:9",
+              "nodes": [],
               "statements": [
                 {
                   "expression": {
@@ -331,10 +335,12 @@
             "id": 1711,
             "nodeType": "FunctionDefinition",
             "src": "588:104:9",
+            "nodes": [],
             "body": {
               "id": 1710,
               "nodeType": "Block",
               "src": "655:37:9",
+              "nodes": [],
               "statements": [
                 {
                   "expression": {
@@ -538,10 +544,12 @@
             "id": 1734,
             "nodeType": "FunctionDefinition",
             "src": "805:153:9",
+            "nodes": [],
             "body": {
               "id": 1733,
               "nodeType": "Block",
               "src": "876:82:9",
+              "nodes": [],
               "statements": [
                 {
                   "expression": {
@@ -834,10 +842,12 @@
             "id": 1759,
             "nodeType": "FunctionDefinition",
             "src": "1157:194:9",
+            "nodes": [],
             "body": {
               "id": 1758,
               "nodeType": "Block",
               "src": "1228:123:9",
+              "nodes": [],
               "statements": [
                 {
                   "expression": {
@@ -1163,10 +1173,12 @@
             "id": 1881,
             "nodeType": "FunctionDefinition",
             "src": "1667:3925:9",
+            "nodes": [],
             "body": {
               "id": 1880,
               "nodeType": "Block",
               "src": "1795:3797:9",
+              "nodes": [],
               "statements": [
                 {
                   "id": 1879,
@@ -3340,10 +3352,12 @@
             "id": 1925,
             "nodeType": "FunctionDefinition",
             "src": "5724:337:9",
+            "nodes": [],
             "body": {
               "id": 1924,
               "nodeType": "Block",
               "src": "5872:189:9",
+              "nodes": [],
               "statements": [
                 {
                   "assignments": [
@@ -3915,10 +3929,12 @@
             "id": 2037,
             "nodeType": "FunctionDefinition",
             "src": "6280:1642:9",
+            "nodes": [],
             "body": {
               "id": 2036,
               "nodeType": "Block",
               "src": "6337:1585:9",
+              "nodes": [],
               "statements": [
                 {
                   "condition": {
@@ -5442,10 +5458,12 @@
             "id": 2073,
             "nodeType": "FunctionDefinition",
             "src": "8022:237:9",
+            "nodes": [],
             "body": {
               "id": 2072,
               "nodeType": "Block",
               "src": "8098:161:9",
+              "nodes": [],
               "statements": [
                 {
                   "id": 2071,
@@ -5915,10 +5933,12 @@
             "id": 2205,
             "nodeType": "FunctionDefinition",
             "src": "8383:983:9",
+            "nodes": [],
             "body": {
               "id": 2204,
               "nodeType": "Block",
               "src": "8444:922:9",
+              "nodes": [],
               "statements": [
                 {
                   "assignments": [
@@ -7529,10 +7549,12 @@
             "id": 2241,
             "nodeType": "FunctionDefinition",
             "src": "9519:245:9",
+            "nodes": [],
             "body": {
               "id": 2240,
               "nodeType": "Block",
               "src": "9599:165:9",
+              "nodes": [],
               "statements": [
                 {
                   "id": 2239,
@@ -8006,10 +8028,12 @@
             "id": 2370,
             "nodeType": "FunctionDefinition",
             "src": "9889:890:9",
+            "nodes": [],
             "body": {
               "id": 2369,
               "nodeType": "Block",
               "src": "9951:828:9",
+              "nodes": [],
               "statements": [
                 {
                   "assignments": [
@@ -9638,10 +9662,12 @@
             "id": 2406,
             "nodeType": "FunctionDefinition",
             "src": "10933:246:9",
+            "nodes": [],
             "body": {
               "id": 2405,
               "nodeType": "Block",
               "src": "11014:165:9",
+              "nodes": [],
               "statements": [
                 {
                   "id": 2404,
@@ -10115,10 +10141,12 @@
             "id": 2493,
             "nodeType": "FunctionDefinition",
             "src": "11430:663:9",
+            "nodes": [],
             "body": {
               "id": 2492,
               "nodeType": "Block",
               "src": "11493:600:9",
+              "nodes": [],
               "statements": [
                 {
                   "assignments": [
@@ -11171,10 +11199,12 @@
             "id": 2532,
             "nodeType": "FunctionDefinition",
             "src": "12247:256:9",
+            "nodes": [],
             "body": {
               "id": 2531,
               "nodeType": "Block",
               "src": "12329:174:9",
+              "nodes": [],
               "statements": [
                 {
                   "id": 2530,

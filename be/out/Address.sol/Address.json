@@ -77,6 +77,7 @@
         "id": 1107,
         "nodeType": "PragmaDirective",
         "src": "101:23:4",
+        "nodes": [],
         "literals": [
           "solidity",
           "^",
@@ -93,10 +94,12 @@
             "id": 1123,
             "nodeType": "FunctionDefinition",
             "src": "1175:320:4",
+            "nodes": [],
             "body": {
               "id": 1122,
               "nodeType": "Block",
               "src": "1241:254:4",
+              "nodes": [],
               "statements": [
                 {
                   "expression": {
@@ -271,10 +274,12 @@
             "id": 1157,
             "nodeType": "FunctionDefinition",
             "src": "2411:312:4",
+            "nodes": [],
             "body": {
               "id": 1156,
               "nodeType": "Block",
               "src": "2482:241:4",
+              "nodes": [],
               "statements": [
                 {
                   "expression": {
@@ -753,10 +758,12 @@
             "id": 1175,
             "nodeType": "FunctionDefinition",
             "src": "3465:185:4",
+            "nodes": [],
             "body": {
               "id": 1174,
               "nodeType": "Block",
               "src": "3554:96:4",
+              "nodes": [],
               "statements": [
                 {
                   "expression": {
@@ -990,10 +997,12 @@
             "id": 1195,
             "nodeType": "FunctionDefinition",
             "src": "3872:223:4",
+            "nodes": [],
             "body": {
               "id": 1194,
               "nodeType": "Block",
               "src": "4019:76:4",
+              "nodes": [],
               "statements": [
                 {
                   "expression": {
@@ -1250,10 +1259,12 @@
             "id": 1215,
             "nodeType": "FunctionDefinition",
             "src": "4457:254:4",
+            "nodes": [],
             "body": {
               "id": 1214,
               "nodeType": "Block",
               "src": "4600:111:4",
+              "nodes": [],
               "statements": [
                 {
                   "expression": {
@@ -1510,10 +1521,12 @@
             "id": 1259,
             "nodeType": "FunctionDefinition",
             "src": "4959:446:4",
+            "nodes": [],
             "body": {
               "id": 1258,
               "nodeType": "Block",
               "src": "5138:267:4",
+              "nodes": [],
               "statements": [
                 {
                   "expression": {
@@ -2122,10 +2135,12 @@
             "id": 1276,
             "nodeType": "FunctionDefinition",
             "src": "5582:197:4",
+            "nodes": [],
             "body": {
               "id": 1275,
               "nodeType": "Block",
               "src": "5682:97:4",
+              "nodes": [],
               "statements": [
                 {
                   "expression": {
@@ -2339,10 +2354,12 @@
             "id": 1305,
             "nodeType": "FunctionDefinition",
             "src": "5963:326:4",
+            "nodes": [],
             "body": {
               "id": 1304,
               "nodeType": "Block",
               "src": "6121:168:4",
+              "nodes": [],
               "statements": [
                 {
                   "assignments": [
@@ -2721,10 +2738,12 @@
             "id": 1322,
             "nodeType": "FunctionDefinition",
             "src": "6468:198:4",
+            "nodes": [],
             "body": {
               "id": 1321,
               "nodeType": "Block",
               "src": "6565:101:4",
+              "nodes": [],
               "statements": [
                 {
                   "expression": {
@@ -2938,10 +2957,12 @@
             "id": 1351,
             "nodeType": "FunctionDefinition",
             "src": "6852:325:4",
+            "nodes": [],
             "body": {
               "id": 1350,
               "nodeType": "Block",
               "src": "7007:170:4",
+              "nodes": [],
               "statements": [
                 {
                   "assignments": [
@@ -3320,10 +3341,12 @@
             "id": 1390,
             "nodeType": "FunctionDefinition",
             "src": "7465:628:4",
+            "nodes": [],
             "body": {
               "id": 1389,
               "nodeType": "Block",
               "src": "7659:434:4",
+              "nodes": [],
               "statements": [
                 {
                   "condition": {
@@ -3803,10 +3826,12 @@
             "id": 1414,
             "nodeType": "FunctionDefinition",
             "src": "8314:295:4",
+            "nodes": [],
             "body": {
               "id": 1413,
               "nodeType": "Block",
               "src": "8474:135:4",
+              "nodes": [],
               "statements": [
                 {
                   "condition": {
@@ -4071,10 +4096,12 @@
             "id": 1434,
             "nodeType": "FunctionDefinition",
             "src": "8615:540:4",
+            "nodes": [],
             "body": {
               "id": 1433,
               "nodeType": "Block",
               "src": "8698:457:4",
+              "nodes": [],
               "statements": [
                 {
                   "condition": {

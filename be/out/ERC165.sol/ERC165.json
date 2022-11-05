@@ -134,6 +134,7 @@
         "id": 1634,
         "nodeType": "PragmaDirective",
         "src": "99:23:7",
+        "nodes": [],
         "literals": [
           "solidity",
           "^",
@@ -145,6 +146,7 @@
         "id": 1635,
         "nodeType": "ImportDirective",
         "src": "124:23:7",
+        "nodes": [],
         "absolutePath": "lib/openzeppelin-contracts/contracts/utils/introspection/IERC165.sol",
         "file": "./IERC165.sol",
         "nameLocation": "-1:-1:-1",
@@ -162,10 +164,12 @@
             "id": 1655,
             "nodeType": "FunctionDefinition",
             "src": "829:155:7",
+            "nodes": [],
             "body": {
               "id": 1654,
               "nodeType": "Block",
               "src": "920:64:7",
+              "nodes": [],
               "statements": [
                 {
                   "expression": {
