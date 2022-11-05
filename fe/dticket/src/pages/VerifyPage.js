@@ -6,6 +6,14 @@ import cross from "../assets/cross.png"
 
 export default function VerifyPage() {
   const [validity, setValidity] = useState(true)
+  const [contract, setContract] = useState(null)
+  const [tokenID, setTokenID] = useState(null)
+  // console.log(contract)
+  const submitHandler = (e) => {
+    e.preventDefault();
+
+  }
+
   return (
     <>
       {validity ? <Modal valid={true} img={tick} close ={() => setValidity(null)}/> : validity === false ? <Modal valid={false} img={cross} close ={() => setValidity(null)}/> : null} 
@@ -13,13 +21,16 @@ export default function VerifyPage() {
       <div className='text-5xl font-bold w-4/5 text-left'>Verify</div>
       <div className='mt-3 text-lg w-4/5 text-left'>Enter a ticket’s contract address and tokenID to verify its authenticity!</div>
       <div className='w-4/5 text-left italic'>Click here if you’re not sure what the contract address and tokenID are.</div>
+      <form className='flex flex-col w-4/5'>
+        <div className='text-3xl mt-10 w-4/5 text-left'>Contract Address</div>
+        <input className="text-black mt-4 h-12 w-4/5 rounded-lg" type="text" onChange={(e) => {setContract(e.target.value)}}></input>
+        <div className='text-3xl mt-10 w-4/5 text-left'>TokenID</div>
+        <input className="text-black mt-4 h-12 w-4/5 rounded-lg" type="text" onChange={(e) => {setTokenID(e.target.value)}}></input>
+        {/* <div className='flex flex row justify-end w-4/5 '> */}
+        <Button x="mt-10 w-32" text="Verify Ticket" onClick={submitHandler}/>
+        {/* </div> */}
+      </form>
 
-      <div className='text-3xl mt-10 w-4/5 text-left'>Contract Address</div>
-      <input className="text-black mt-4 h-12 w-4/5 rounded-lg" type="text"></input>
-      <div className='text-3xl mt-10 w-4/5 text-left'>TokenID</div>
-      <input className="text-black mt-4 h-12 w-4/5 rounded-lg" type="text"></input>
-
-      <Button x="mt-10" text="Verify Ticket" />
     </div>
     </>
 
