@@ -2,7 +2,7 @@
 pragma solidity ^0.8.13;
 import "@openzeppelin/contracts/token/ERC721/IERC721.sol";
 
-contract ERC721 is IERC721 {
+contract ERC721{
 
     //mint a new token
     
