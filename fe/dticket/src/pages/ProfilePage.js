@@ -1,7 +1,12 @@
 import React from 'react'
+import Modal from '../components/modal/Modal'
 
 export default function ProfilePage() {
   return (
-    <div>ProfilePage</div>
+    <>
+       <div className='relative'> <Modal /> ProfilePage</div>
+     
+    </>
+ 
   )
 }

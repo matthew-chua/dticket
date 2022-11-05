@@ -9,6 +9,7 @@ import VerifyPage from './pages/VerifyPage';
 import ProfilePage from './pages/ProfilePage';
 import EventPage from './pages/EventPage';
 import EventsPage from './pages/EventsPage';
+import Modal from './components/modal/Modal';
 function App() {
   return (
     <div className="App">
