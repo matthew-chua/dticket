@@ -37,11 +37,12 @@ contract Marketplace {
     //     delete listings[tokenAddress][tokenId];
     // }
 
-    function buyItem(address tokenAddress, uint256 tokenId) public payable {
+    function buyItem(address tokenAddress) public payable {
         //buy item from marketplace
 
         // 1. Find ticket -- Throws error if doesn't exist
-        listing ticketToBePurchased = _getListingFor(tokenAddress, tokenId);
+        listing ticketToBePurchased = _getCheapestListingFor(tokenAddress);
+        uint256 tokenId = ticketToBePurchased.id;
 
         require(msg.value == ticketToBePurchased.price, "Incorrect price");
         IERC721(tokenAddress).transferFrom(address(this), msg.sender, tokenId);
