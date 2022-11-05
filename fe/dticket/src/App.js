@@ -9,11 +9,12 @@ import VerifyPage from './pages/VerifyPage';
 import ProfilePage from './pages/ProfilePage';
 import EventPage from './pages/EventPage';
 import EventsPage from './pages/EventsPage';
+import NavBar from './components/layout/NavBar';
 function App() {
   return (
     <div className="App">
     <Router>
-      <div />
+      <NavBar/>
       <Switch>
         <Route path="/" element={<LandingPage/>} />
         <Route path="/verify" element={<VerifyPage/>} />
