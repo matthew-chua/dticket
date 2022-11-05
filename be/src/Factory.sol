@@ -7,8 +7,8 @@ import "./Mother.sol";
 contract Factory {
     Mother mo;
     //create a new event and add it to the events mapping in mother
-    function createNew721(string memory name_, string memory symbol_, address mother_) public{
-        ERC721 new721 = new ERC721(name_, symbol_, mother_); 
+    function createNew721(string memory name_, string memory symbol_, string memory _initBaseURI) public{
+        ERC721 new721 = new NFT(name_, symbol_, _initBaseURI); 
         address newAddress = address(new721); 
         mo.addEvent(newAddress);
     }

@@ -41,7 +41,7 @@ contract Marketplace {
         //buy item from marketplace
 
         // 1. Find ticket -- Throws error if doesn't exist
-        listing ticketToBePurchased = _getCheapestListingFor(tokenAddress);
+        listing memory ticketToBePurchased = _getCheapestListingFor(tokenAddress);
         uint256 tokenId = ticketToBePurchased.id;
 
         require(msg.value == ticketToBePurchased.price, "Incorrect price");
@@ -53,15 +53,15 @@ contract Marketplace {
         seller.transfer(ticketToBePurchased.price);
 
         // 3. Remove listing
-        require(this._deleteListingFor(tokenAddress, tokenId) == true, "Could not remove listing");
+        require(_deleteListingFor(tokenAddress, tokenId) == true, "Could not remove listing");
 
         // delete listings[tokenAddress][tokenId];
     }
 
     // Gets the listing for a given token id at a given contract address
     // Throws error if doesn't exist
-    function _getListingFor(address tokenAddress, uint256 tokenId) internal returns(listing) {
-        listing[] listingsForGivenAddress = listings[tokenAddress];
+    function _getListingFor(address tokenAddress, uint256 tokenId) internal view returns(listing memory) {
+        listing[] memory listingsForGivenAddress = listings[tokenAddress];
         for (uint i=0; i<listingsForGivenAddress.length; i++) {
             if (listingsForGivenAddress[i].id == tokenId) {
                 return listingsForGivenAddress[i];
@@ -72,7 +72,7 @@ contract Marketplace {
 
     // Deletes a listing -- returns True if success
     function _deleteListingFor(address tokenAddress, uint256 tokenId) internal returns(bool) {
-        listing[] listingsForGivenAddress = listings[tokenAddress];
+        listing[] memory listingsForGivenAddress = listings[tokenAddress];
         for (uint i=0; i<listingsForGivenAddress.length; i++) {
             if (listingsForGivenAddress[i].id == tokenId) {
                 delete listings[tokenAddress][i];
@@ -84,13 +84,13 @@ contract Marketplace {
     
     // Gets cheapest listing for a given contract address
     // Returns the token Id
-    function _getCheapestListingFor(address tokenAddress) internal returns(listing) {
-        listing[] listingsForGivenAddress = listings[tokenAddress];
+    function _getCheapestListingFor(address tokenAddress) internal view returns(listing memory) {
+        listing[] memory listingsForGivenAddress = listings[tokenAddress];
         
         // Make sure there are existing listings
         require(listingsForGivenAddress.length > 0, "No available listing");
 
-        listing cheapestListing = listingsForGivenAddress[0]; 
+        listing memory cheapestListing = listingsForGivenAddress[0]; 
 
         for (uint i=1; i<listingsForGivenAddress.length; i++) {
             if (listingsForGivenAddress[i].price < cheapestListing.price) {
