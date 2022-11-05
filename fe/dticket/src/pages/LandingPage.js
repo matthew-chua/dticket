@@ -13,10 +13,10 @@ function LandingPage() {
                 </div>
                 <div className="text-xl text-white italic">Your one stop shop for authentic tickets!</div>
                 <div className="mt-3 text-white ease-in-out duration-100">{statement}</div>
-                <div className="flex flex-row mt-2">
+                {/* <div className="flex flex-row mt-2">
                     <Button reverse={true} text="Events" onHover={() => setStatement("Buy authentic tickets straight from event holders!")}/>
                     <Button x="ml-2" reverse={false} text="Marketplace" onHover={() => setStatement("Buy verified tickets from trusted resellers!")}/>
-                </div>
+                </div> */}
             </div>
             <img className="h-3/5" src={landing} />
         </div>
