@@ -8,4 +8,12 @@ contract Mother {
         //check if event is in events
         return events[eventAddress];
     }
+
+    function addEvent(address newEvent) public returns(bool){
+        //add event to events
+        events[newEvent] = true;
+        return true;
+    }
+
+
 }
