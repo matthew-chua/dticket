@@ -6,11 +6,13 @@ import "@openzeppelin/contracts/token/ERC721/IERC721.sol";
 contract Marketplace {
     
     struct listing {
+        uint256 id;
         uint price;
         address seller;
     }
     
-    mapping(address => mapping(uint256 => listing)) public listings;
+    // mapping(address => mapping(uint256 => listing)) public listings;
+    mapping(address => listing[]) public listings;
     
     //this can be used to update pricing as well
     function listItem(address tokenAddress, uint256 tokenId, uint256 price) public {
@@ -25,26 +27,77 @@ contract Marketplace {
         IERC721(tokenAddress).approve(address(this), tokenId);
         
         //add item to marketplace
-        listings[tokenAddress][tokenId] = listing(price, msg.sender);
+        listings[tokenAddress].push(listing(tokenId, price, msg.sender));
 
     }
 
-    function removeItem(address tokenAddress, uint256 tokenId) public {
+    // function removeItem(address tokenAddress, uint256 tokenId) public {
 
-        //remove item from marketplace
-        delete listings[tokenAddress][tokenId];
-    }
+    //     //remove item from marketplace
+    //     delete listings[tokenAddress][tokenId];
+    // }
 
     function buyItem(address tokenAddress, uint256 tokenId) public payable {
         //buy item from marketplace
-        require(msg.value == listings[tokenAddress][tokenId].price, "Incorrect price");
+
+        // 1. Find ticket -- Throws error if doesn't exist
+        listing ticketToBePurchased = _getListingFor(tokenAddress, tokenId);
+
+        require(msg.value == ticketToBePurchased.price, "Incorrect price");
         IERC721(tokenAddress).transferFrom(address(this), msg.sender, tokenId);
         
-        // transfer money to seller
-        address payable seller = payable(listings[tokenAddress][tokenId].seller);
-        uint price = listings[tokenAddress][tokenId].price;
-        seller.transfer(price);
+        // 2. Transfer money to seller
+        address payable seller = payable(ticketToBePurchased.seller);
+        // uint price = listings[tokenAddress][tokenId].price;
+        seller.transfer(ticketToBePurchased.price);
 
-        delete listings[tokenAddress][tokenId];
+        // 3. Remove listing
+        require(this._deleteListingFor(tokenAddress, tokenId) == true, "Could not remove listing");
+
+        // delete listings[tokenAddress][tokenId];
     }
+
+    // Gets the listing for a given token id at a given contract address
+    // Throws error if doesn't exist
+    function _getListingFor(address tokenAddress, uint256 tokenId) internal returns(listing) {
+        listing[] listingsForGivenAddress = listings[tokenAddress];
+        for (uint i=0; i<listingsForGivenAddress.length; i++) {
+            if (listingsForGivenAddress[i].id == tokenId) {
+                return listingsForGivenAddress[i];
+            }
+        }
+        revert('Not found');
+    }
+
+    // Deletes a listing -- returns True if success
+    function _deleteListingFor(address tokenAddress, uint256 tokenId) internal returns(bool) {
+        listing[] listingsForGivenAddress = listings[tokenAddress];
+        for (uint i=0; i<listingsForGivenAddress.length; i++) {
+            if (listingsForGivenAddress[i].id == tokenId) {
+                delete listings[tokenAddress][i];
+                return true;
+            }
+        }
+        return false;
+    }
+    
+    // Gets cheapest listing for a given contract address
+    // Returns the token Id
+    function _getCheapestListingFor(address tokenAddress) internal returns(listing) {
+        listing[] listingsForGivenAddress = listings[tokenAddress];
+        
+        // Make sure there are existing listings
+        require(listingsForGivenAddress.length > 0, "No available listing");
+
+        listing cheapestListing = listingsForGivenAddress[0]; 
+
+        for (uint i=1; i<listingsForGivenAddress.length; i++) {
+            if (listingsForGivenAddress[i].price < cheapestListing.price) {
+                cheapestListing = listingsForGivenAddress[i];
+            }
+        }
+
+        return cheapestListing;
+    }
+
 }
