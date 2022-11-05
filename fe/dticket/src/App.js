@@ -11,6 +11,7 @@ import EventPage from './pages/EventPage';
 import EventsPage from './pages/EventsPage';
 import Modal from './components/modal/Modal';
 import NavBar from './components/layout/NavBar';
+import TicketPage from './pages/TicketPage';
 function App() {
   return (
     <div className="App">
@@ -23,6 +24,7 @@ function App() {
         <Route path="/profile" element={<ProfilePage/>} />
         <Route path="/events/" element={<EventsPage/>} />
         <Route path="/events/:eventID" element={<EventPage/>} />
+        <Route path="/profile/ticket" element={<TicketPage/>} />
       </Switch>
     </Router>
     </div>

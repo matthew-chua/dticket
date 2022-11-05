@@ -1,6 +1,6 @@
 import React from 'react'
 import Modal from '../components/modal/Modal'
-import Card from '../components/card/Card'
+import CardUser from '../components/card/CardUser'
 import adele from '../assets/adele.png'
 
 export default function ProfilePage() {
@@ -43,7 +43,7 @@ export default function ProfilePage() {
         <div className='text-xl w-4/5 text-left ml-20'>Get excited for these events!</div>
         <div className="grid grid-cols-3 gap-0 justify-items-center text-black">
           {DUMMY_DATA.map((event) => (
-            <Card
+            <CardUser
               location={event.location}
               img={event.img}
               title={event.title}
@@ -56,7 +56,7 @@ export default function ProfilePage() {
         <div className='text-xl w-4/5 text-left ml-20'>Relive some good memories of previous events!</div>
         <div className="grid grid-cols-3 gap-0 justify-items-center text-black">
           {DUMMY_DATA.map((event) => (
-            <Card
+            <CardUser
               location={event.location}
               img={event.img}
               title={event.title}
