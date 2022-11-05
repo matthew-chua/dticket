@@ -13,6 +13,7 @@
   height: 4.25rem;
   color: white;
   z-index: initial;
+  background: rgba(204, 82, 123, 0.804);
 }
 .navBarJustify {
   justify-content: space-around;

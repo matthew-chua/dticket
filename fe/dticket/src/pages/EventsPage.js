@@ -3,6 +3,7 @@ import Card from "../components/card/Card";
 import adele from "../assets/adele.png";
 
 export default function EventsPage() {
+  // console.log(window.ethereum.isConnected())
   const DUMMY_DATA = [
     {
       img: adele,
@@ -34,11 +35,11 @@ export default function EventsPage() {
     },
   ];
   return (
-    <div className="pt-36">
-      <h1 className="text-5xl text-left ml-24">Events</h1>
-      <div className="text-left ml-24">Look for your favorite events here!</div>
-      <h2 className="text-3xl text-left ml-24 mt-8 ">Concerts</h2>
-      <div className="grid grid-cols-3 gap-0 justify-items-center	">
+    <div className="pt-24">
+      <h1 className="text-5xl text-left ml-24 text-white font-bold">Events</h1>
+      <div className="text-left ml-24 text-white">Look for your favorite events here!</div>
+      <h2 className="text-3xl text-left ml-24 mt-8 text-white font-bold">Concerts</h2>
+      <div className="grid grid-cols-3 gap-x-2 justify-items-center	">
         {DUMMY_DATA.map((event) => (
           <Card
             location={event.location}
@@ -50,7 +51,7 @@ export default function EventsPage() {
         ))}
       </div>
 
-      <h2 className="text-3xl text-left ml-24 mt-8">NBA</h2>
+      <h2 className="text-3xl text-left ml-24 mt-8 text-white font-bold">NBA</h2>
       <div className="grid grid-cols-3 justify-items-center	">
         {DUMMY_DATA.map((event) => (
           <Card

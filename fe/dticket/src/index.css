@@ -10,6 +10,8 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background: linear-gradient(120.25deg, #CC527A -4.36%, rgba(55, 55, 55, 0.8) 86.49%);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   font-family: 'Montserrat', sans-serif;
 }
 
