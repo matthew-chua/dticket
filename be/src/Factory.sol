@@ -12,4 +12,8 @@ contract Factory {
         address newAddress = address(new721); 
         mo.addEvent(newAddress);
     }
+
+    function setMother(address motherContractAddress) public{
+        mo = Mother(motherContractAddress);
+    }
 }

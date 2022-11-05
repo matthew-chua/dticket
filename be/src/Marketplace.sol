@@ -31,12 +31,6 @@ contract Marketplace {
 
     }
 
-    // function removeItem(address tokenAddress, uint256 tokenId) public {
-
-    //     //remove item from marketplace
-    //     delete listings[tokenAddress][tokenId];
-    // }
-
     function buyItem(address tokenAddress) public payable {
         //buy item from marketplace
 
@@ -60,7 +54,7 @@ contract Marketplace {
 
     // Gets the listing for a given token id at a given contract address
     // Throws error if doesn't exist
-    function _getListingFor(address tokenAddress, uint256 tokenId) internal view returns(listing memory) {
+    function _getListingFor(address tokenAddress, uint256 tokenId) private view returns(listing memory) {
         listing[] memory listingsForGivenAddress = listings[tokenAddress];
         for (uint i=0; i<listingsForGivenAddress.length; i++) {
             if (listingsForGivenAddress[i].id == tokenId) {
@@ -71,7 +65,7 @@ contract Marketplace {
     }
 
     // Deletes a listing -- returns True if success
-    function _deleteListingFor(address tokenAddress, uint256 tokenId) internal returns(bool) {
+    function _deleteListingFor(address tokenAddress, uint256 tokenId) private returns(bool) {
         listing[] memory listingsForGivenAddress = listings[tokenAddress];
         for (uint i=0; i<listingsForGivenAddress.length; i++) {
             if (listingsForGivenAddress[i].id == tokenId) {
@@ -84,7 +78,7 @@ contract Marketplace {
     
     // Gets cheapest listing for a given contract address
     // Returns the token Id
-    function _getCheapestListingFor(address tokenAddress) internal view returns(listing memory) {
+    function _getCheapestListingFor(address tokenAddress) private view returns(listing memory) {
         listing[] memory listingsForGivenAddress = listings[tokenAddress];
         
         // Make sure there are existing listings
