@@ -1,19 +1,30 @@
-import React, { useState } from 'react'
+import React, { useState, useContext} from 'react'
 import Button from '../components/button/Button'
 import Modal from '../components/modal/Modal'
 import tick from "../assets/tick.png"
 import cross from "../assets/cross.png"
+import UserContext from '../Contexts/usercontext'
+import { ethers } from 'ethers'
+import MotherABI from '../ABIs/mother'
 
 export default function VerifyPage() {
-  const [validity, setValidity] = useState(true)
+  const [validity, setValidity] = useState(null)
   const [contract, setContract] = useState(null)
   const [tokenID, setTokenID] = useState(null)
+  const user = useContext(UserContext)
+  const CONTRACT = "0xce2CF29728912c3a318f122733921685bc2287d5"
   // console.log(contract)
-  const submitHandler = (e) => {
+
+  const  submitHandler = async (e) => {
     e.preventDefault();
-
+    let provider = ethers.getDefaultProvider("https://goerli.optimism.io");
+    const new_contract = new ethers.Contract(CONTRACT, MotherABI, provider);
+    // console.log(new_contract)
+    // console.log(contract)
+    let tx = await new_contract.verify(contract);
+    // await tx.wait();
+    setValidity(tx)
   }
-
   return (
     <>
       {validity ? <Modal valid={true} img={tick} close ={() => setValidity(null)}/> : validity === false ? <Modal valid={false} img={cross} close ={() => setValidity(null)}/> : null} 

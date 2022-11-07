@@ -12,12 +12,16 @@ import EventsPage from './pages/EventsPage';
 import Modal from './components/modal/Modal';
 import NavBar from './components/layout/NavBar';
 import TicketPage from './pages/TicketPage';
+import UserContext from './Contexts/usercontext';
+import { useState } from 'react';
 function App() {
+  const [user, setUser] = useState(null)
+  // console.log(user)
   return (
     <div className="App">
     <Router>
-    <NavBar/>
-
+    <NavBar setUser={(e) => setUser(e)}/>
+    <UserContext.Provider value={user}>
       <Switch>
         <Route path="/" element={<LandingPage/>} />
         <Route path="/verify" element={<VerifyPage/>} />
@@ -26,6 +30,7 @@ function App() {
         <Route path="/events/:eventID" element={<EventPage/>} />
         <Route path="/profile/ticket" element={<TicketPage/>} />
       </Switch>
+    </UserContext.Provider>
     </Router>
     </div>
   );
