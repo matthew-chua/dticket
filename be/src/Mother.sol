@@ -2,9 +2,9 @@
 pragma solidity ^0.8.13;
 
 contract Mother {
-    mapping(address => bool) events;
+    mapping(address => bool) public events;
 
-    mapping(address => mapping(uint256 => bool)) expended;
+    mapping(address => mapping(uint256 => bool)) public expended;
 
     function verify(address eventAddress) public view returns(bool){
         //check if event is in events

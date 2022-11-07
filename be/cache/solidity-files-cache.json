@@ -568,8 +568,8 @@
       }
     },
     "src/ERC721.sol": {
-      "lastModificationDate": 1667685496917,
-      "contentHash": "5c66a82b5b72b3c57f1d9ef871fc699f",
+      "lastModificationDate": 1667711706085,
+      "contentHash": "56b7820e39dc8197b368d99540fe578d",
       "sourceName": "src/ERC721.sol",
       "solcConfig": {
         "settings": {
@@ -622,8 +622,8 @@
       }
     },
     "src/Factory.sol": {
-      "lastModificationDate": 1667685496917,
-      "contentHash": "89f3c7ad07a1372cd546a54b45219a59",
+      "lastModificationDate": 1667711706085,
+      "contentHash": "d7ca34a168a7d23f54b2e4ba44fe87e9",
       "sourceName": "src/Factory.sol",
       "solcConfig": {
         "settings": {
@@ -674,57 +674,6 @@
       "artifacts": {
         "Factory": {
           "0.8.17+commit.8df45f5f.Darwin.appleclang": "Factory.sol/Factory.json"
-        }
-      }
-    },
-    "src/Marketplace.sol": {
-      "lastModificationDate": 1667685496918,
-      "contentHash": "6e58d4c4ebc34a1b2ead6a330b8f91e9",
-      "sourceName": "src/Marketplace.sol",
-      "solcConfig": {
-        "settings": {
-          "optimizer": {
-            "enabled": true,
-            "runs": 200
-          },
-          "metadata": {
-            "bytecodeHash": "ipfs",
-            "appendCBOR": true
-          },
-          "outputSelection": {
-            "*": {
-              "": [
-                "ast"
-              ],
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata"
-              ]
-            }
-          },
-          "evmVersion": "london",
-          "libraries": {}
-        }
-      },
-      "imports": [
-        "lib/openzeppelin-contracts/contracts/token/ERC721/ERC721.sol",
-        "lib/openzeppelin-contracts/contracts/token/ERC721/IERC721.sol",
-        "lib/openzeppelin-contracts/contracts/token/ERC721/IERC721Receiver.sol",
-        "lib/openzeppelin-contracts/contracts/token/ERC721/extensions/IERC721Metadata.sol",
-        "lib/openzeppelin-contracts/contracts/utils/Address.sol",
-        "lib/openzeppelin-contracts/contracts/utils/Context.sol",
-        "lib/openzeppelin-contracts/contracts/utils/Strings.sol",
-        "lib/openzeppelin-contracts/contracts/utils/introspection/ERC165.sol",
-        "lib/openzeppelin-contracts/contracts/utils/introspection/IERC165.sol",
-        "lib/openzeppelin-contracts/contracts/utils/math/Math.sol"
-      ],
-      "versionRequirement": "^0.8.13",
-      "artifacts": {
-        "Marketplace": {
-          "0.8.17+commit.8df45f5f.Darwin.appleclang": "Marketplace.sol/Marketplace.json"
         }
       }
     },

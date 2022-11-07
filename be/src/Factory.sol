@@ -6,6 +6,7 @@ import "./Mother.sol";
 
 contract Factory {
     Mother mo;
+    address public motherAddress;
     //create a new event and add it to the events mapping in mother
     // , address motherContractAddress, string memory initBaseURI_
     // , motherContractAddress, initBaseURI_
@@ -16,6 +17,7 @@ contract Factory {
     }
 
     function setMother(address motherContractAddress) public{
+        motherAddress = motherContractAddress;
         mo = Mother(motherContractAddress);
     }
 }
