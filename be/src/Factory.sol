@@ -1,23 +1,24 @@
 // SPDX-License-Identifier: UNLICENSED
 pragma solidity ^0.8.13;
-import "@openzeppelin/contracts/token/ERC721/IERC721.sol";
 import "./ERC721.sol";
+import "./IERC721.sol";
 import "./Mother.sol";
 
 contract Factory {
-    Mother mo;
-    address public motherAddress;
-    //create a new event and add it to the events mapping in mother
-    // , address motherContractAddress, string memory initBaseURI_
-    // , motherContractAddress, initBaseURI_
-    function createNew721(string memory name_, string memory symbol_, string memory initBaseURI_) public{
-        NFT new721 = new NFT(name_, symbol_, initBaseURI_); 
-        address newAddress = address(new721); 
-        mo.addEvent(newAddress);
+    address public mother;
+
+    event NewEventCreated (
+        address eventAddress
+    );
+
+    function setMother(address newMotherAddress) public {
+        mother = newMotherAddress;
     }
 
-    function setMother(address motherContractAddress) public{
-        motherAddress = motherContractAddress;
-        mo = Mother(motherContractAddress);
+    function addEvent() public {
+        ERC721 newEvent = new ERC721();
+        Mother motherContract = Mother(mother);
+        motherContract.addEvent(address(newEvent));
+        emit NewEventCreated(address(newEvent));
     }
 }

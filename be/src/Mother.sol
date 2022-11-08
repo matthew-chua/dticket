@@ -1,28 +1,25 @@
 // SPDX-License-Identifier: UNLICENSED
 pragma solidity ^0.8.13;
+import "./IERC721.sol";
 
 contract Mother {
+
     mapping(address => bool) public events;
+    mapping(address => mapping(uint => bool)) public expended;
 
-    mapping(address => mapping(uint256 => bool)) public expended;
-
-    function verify(address eventAddress) public view returns(bool){
-        //check if event is in events
-        return events[eventAddress];
+    function verify(address tokenAddress) public view returns (bool){
+        return events[tokenAddress];
     }
 
-    function addEvent(address newEvent) public returns(bool){
-        //add event to events
-        events[newEvent] = true;
-        return true;
+    function addEvent(address tokenAddress) public {
+        events[tokenAddress] = true;
     }
 
-    function expendTicket(address eventAddress, uint256 ticketId) public returns(bool){
-        //add ticket to expended
-        require(events[eventAddress], "Event does not exist");
-        expended[eventAddress][ticketId] = true;
-        return true;
+    function expendTicket(address tokenAddress, uint tokenID) public {
+        require(events[tokenAddress], "Not an event");
+        IERC721 token = IERC721(tokenAddress);
+        require(token.ownerOf(tokenID) == msg.sender, "Not the owner");
+        require(!expended[tokenAddress][tokenID], "Already expended");
+        expended[tokenAddress][tokenID] = true;
     }
-
-
 }
