@@ -4,7 +4,8 @@ import { useState } from "react";
 import Button from "../button/Button";
 import {ethers} from 'ethers'
 
-const NavBar = () => {
+const NavBar = (props) => {
+
   const [menuIsOpen, setMenuIsOpen] = useState(false);
 	const [errorMessage, setErrorMessage] = useState(null);
 	const [defaultAccount, setDefaultAccount] = useState(null);
@@ -60,6 +61,7 @@ const NavBar = () => {
 
 	// update account, will cause component re-render
 	const accountChangedHandler = (newAccount) => {
+    props.setUser(newAccount);
 		setDefaultAccount(newAccount);
 		getAccountBalance(newAccount.toString());
 	}
