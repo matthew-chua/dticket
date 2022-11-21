@@ -3,6 +3,7 @@ import adele from "../assets/adele.png"
 import Button from "../components/button/Button"
 import SellModal from "../components/modal/SellModal"
 import { useState } from "react"
+import CONTRACTS from "../contracts"
 
 function TicketPage() {
 	const [sell, setSell] = useState(false)
@@ -23,8 +24,8 @@ function TicketPage() {
 					location="Berkeley, CA"
 					date="24 Mar, 08:00"
 					close={close}
-					contract="0x81b4B4721B6f6834f5FB4247E8db8DDCf4f90bd6"
-					tokenId="2"
+					contract={CONTRACTS.ADELENFT}
+					tokenId="3" // todo: update for demo
 				/>
 			)}
 			<div className="h-screen w-full flex flex-col justify-center items-center">

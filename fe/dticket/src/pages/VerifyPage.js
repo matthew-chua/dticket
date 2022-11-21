@@ -5,16 +5,16 @@ import tick from "../assets/tick.png"
 import cross from "../assets/cross.png"
 import { ethers } from "ethers"
 import MotherABI from "../ABIs/mother"
+import CONTRACTS from "../contracts"
 
 export default function VerifyPage() {
 	const [validity, setValidity] = useState(null)
 	const [contract, setContract] = useState(null)
-	const CONTRACT = "0xe63032C48f9e66A63149e66401091E69d2060ffB"
 
 	const submitHandler = async (e) => {
 		e.preventDefault()
 		let provider = ethers.getDefaultProvider("https://goerli.optimism.io")
-		const new_contract = new ethers.Contract(CONTRACT, MotherABI, provider)
+		const new_contract = new ethers.Contract(CONTRACTS.MOTHER, MotherABI, provider)
 		let tx = await new_contract.verify(contract)
 		setValidity(tx)
 	}
