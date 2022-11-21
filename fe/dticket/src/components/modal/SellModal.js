@@ -1,13 +1,11 @@
-import { useContext, useState } from "react"
+import { useState } from "react"
 import Button from "../button/Button"
 import { ethers } from "ethers"
 import MarketplaceABI from "../../ABIs/marketplace"
-import UserContext from "../../Contexts/usercontext"
 
 export default function SellModal(props) {
 	const [price, setPrice] = useState(0)
 	const CONTRACT = "0xE35175ead7eACb2edd4CdA8a01adB293eBc87C3C"
-	const user = useContext(UserContext)
 
 	const submitHandler = async (e) => {
 		e.preventDefault()
