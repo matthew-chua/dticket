@@ -97,24 +97,12 @@ const NavBar = (props) => {
 				</NavLink>
 				<div className={`${classes.navLinks} ${menuIsOpen || classes.close}`}>
 					{navBarLinks.map((link) => (
-						<NavLink
-							key={link.to}
-							className={classes.navLink}
-							to={link.to}
-							activeClassName={classes.activeNavLink}
-							exact
-							onClick={menuClickHandler}>
+						<NavLink key={link.to} className={classes.navLink} to={link.to} exact="true" onClick={menuClickHandler}>
 							<b>{link.text}</b>
 						</NavLink>
 					))}
 					{defaultAccount ? (
-						<NavLink
-							to="/profile"
-							text="Profile"
-							className={classes.navLink}
-							activeClassName={classes.activeNavLink}
-							exact
-							onClick={menuClickHandler}>
+						<NavLink to="/profile" text="Profile" className={classes.navLink} exact="true" onClick={menuClickHandler}>
 							<b>Profile</b>
 						</NavLink>
 					) : null}
