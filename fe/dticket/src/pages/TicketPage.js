@@ -16,7 +16,17 @@ function TicketPage() {
 
 	return (
 		<>
-			{sell && <SellModal img={adele} title="Adele" location="Berkeley, CA" date="24 Mar, 08:00" close={close} />}
+			{sell && (
+				<SellModal
+					img={adele}
+					title="Adele"
+					location="Berkeley, CA"
+					date="24 Mar, 08:00"
+					close={close}
+					contract="0x81b4B4721B6f6834f5FB4247E8db8DDCf4f90bd6"
+					tokenId="0"
+				/>
+			)}
 			<div className="h-screen w-full flex flex-col justify-center items-center">
 				<div className="h-1/3 w-1/3 flex flex-row">
 					<div className="h-full w-1/2 bg-white rounded-lg flex flex-col justify-start align-center">
