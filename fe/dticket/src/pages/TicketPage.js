@@ -24,7 +24,7 @@ function TicketPage() {
 					date="24 Mar, 08:00"
 					close={close}
 					contract="0x81b4B4721B6f6834f5FB4247E8db8DDCf4f90bd6"
-					tokenId="0"
+					tokenId="2"
 				/>
 			)}
 			<div className="h-screen w-full flex flex-col justify-center items-center">

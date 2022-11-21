@@ -1,16 +1,19 @@
-import { useState } from "react"
+import { useContext, useState } from "react"
 import Button from "../button/Button"
 import { ethers } from "ethers"
 import MarketplaceABI from "../../ABIs/marketplace"
+import UserContext from "../../Contexts/usercontext"
 
 export default function SellModal(props) {
 	const [price, setPrice] = useState(0)
 	const CONTRACT = "0xE35175ead7eACb2edd4CdA8a01adB293eBc87C3C"
+	const user = useContext(UserContext)
 
 	const submitHandler = async (e) => {
 		e.preventDefault()
-		let provider = ethers.getDefaultProvider("https://goerli.optimism.io")
-		const new_contract = new ethers.Contract(CONTRACT, MarketplaceABI, provider)
+		let provider = new ethers.providers.Web3Provider(window.ethereum)
+		const signer = provider.getSigner()
+		const new_contract = new ethers.Contract(CONTRACT, MarketplaceABI, signer)
 		let tx = await new_contract.createListing(props.contract, props.tokenId, price)
 		console.log("sellmodal tx", tx)
 	}
