@@ -25,7 +25,7 @@ function TicketPage() {
 					date="24 Mar, 08:00"
 					close={close}
 					contract={CONTRACTS.ADELENFT}
-					tokenId="3" // todo: update for demo
+					tokenId="5" // todo: update for demo
 				/>
 			)}
 			<div className="h-screen w-full flex flex-col justify-center items-center">

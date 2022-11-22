@@ -3,9 +3,11 @@ import Button from "../button/Button"
 import { ethers } from "ethers"
 import MarketplaceABI from "../../ABIs/marketplace"
 import CONTRACTS from "../../contracts"
+import ListModal from "./ListModal"
 
 export default function SellModal(props) {
 	const [price, setPrice] = useState(0)
+	const [success, setSuccess] = useState(null)
 
 	const submitHandler = async (e) => {
 		e.preventDefault()
@@ -14,11 +16,18 @@ export default function SellModal(props) {
 		const new_contract = new ethers.Contract(CONTRACTS.MARKETPLACE, MarketplaceABI, signer)
 		let tx = await new_contract.createListing(props.contract, props.tokenId, price)
 		console.log("sellmodal tx", tx)
+		setSuccess(true)
+		console.log("success", success)
 	}
 	// const valid = "This ticket is verified and ready to be used!"
 	// const invalid = "Heads up! This ticket is NOT verified."
 	return (
 		<>
+			{success ? (
+				<ListModal isValid={true} onClose={() => setSuccess(null)} />
+			) : success === false ? (
+				<ListModal isValid={false} onClose={() => setSuccess(null)} />
+			) : null}
 			<div className="h-screen w-full bg-[rgb(0,0,0,0.5)] absolute flex flex-row justify-center items-center z-10">
 				<div className="bg-white h-3/5 w-2/5 flex flex-col items-center justify-start rounded-lg pt-10">
 					<div className="h-3/5 flex flex-col items-center space-around">

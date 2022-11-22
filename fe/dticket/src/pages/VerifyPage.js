@@ -1,8 +1,6 @@
 import React, { useState } from "react"
 import Button from "../components/button/Button"
-import Modal from "../components/modal/Modal"
-import tick from "../assets/tick.png"
-import cross from "../assets/cross.png"
+import VerifyModal from "../components/modal/VerifyModal"
 import { ethers } from "ethers"
 import MotherABI from "../ABIs/mother"
 import CONTRACTS from "../contracts"
@@ -21,9 +19,9 @@ export default function VerifyPage() {
 	return (
 		<>
 			{validity ? (
-				<Modal valid={true} img={tick} close={() => setValidity(null)} />
+				<VerifyModal isValid={true} onClose={() => setValidity(null)} />
 			) : validity === false ? (
-				<Modal valid={false} img={cross} close={() => setValidity(null)} />
+				<VerifyModal isValid={false} onClose={() => setValidity(null)} />
 			) : null}
 			<div className="h-screen w-full pt-36 flex flex-col justify-start items-center text-white">
 				<div className="text-5xl font-bold w-4/5 text-left">Verify</div>
