@@ -2,32 +2,39 @@ import qr from "../assets/qr.png"
 import adele from "../assets/adele.png"
 import Button from "../components/button/Button"
 import SellModal from "../components/modal/SellModal"
+import ListModal from "../components/modal/ListModal"
 import { useState } from "react"
 import CONTRACTS from "../contracts"
 
 function TicketPage() {
-	const [sell, setSell] = useState(false)
-	const close = () => {
-		setSell(null)
-	}
+	const [sell, setSell] = useState(null)
+
 	const openSell = () => {
 		setSell(true)
-		// console.log(sell)
+	}
+	const onClose = () => {
+		setSell(null)
+	}
+	const onSold = () => {
+		setSell(false)
 	}
 
 	return (
 		<>
-			{sell && (
+			{sell ? (
 				<SellModal
 					img={adele}
 					title="Adele"
 					location="Berkeley, CA"
 					date="24 Mar, 08:00"
-					close={close}
+					onClose={onClose}
+					onSold={onSold}
 					contract={CONTRACTS.ADELENFT}
-					tokenId="5" // todo: update for demo
+					tokenId="7" // todo: update for demo
 				/>
-			)}
+			) : sell === false ? (
+				<ListModal isValid={true} onClose={onClose} />
+			) : null}
 			<div className="h-screen w-full flex flex-col justify-center items-center">
 				<div className="h-1/3 w-1/3 flex flex-row">
 					<div className="h-full w-1/2 bg-white rounded-lg flex flex-col justify-start align-center">
