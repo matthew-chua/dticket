@@ -25,7 +25,7 @@ export default function SellModal(props) {
 					<div className="text-xl font-bold">You are selling:</div>
 					<div className="flex flex-row justify-between h-2/5 w-full border-black rounded-md border-2 mt-5">
 						<img className="h-full rounded-l-md" src={props.img} alt="sell modal img" />
-						<div className="flex flex-col text-left w-full ml-3 justify-center">
+						<div className="flex flex-col text-left w-full mx-3 justify-center">
 							<div className="font-bold">{props.title}</div>
 							<div>{props.location}</div>
 							<div>{props.date}</div>

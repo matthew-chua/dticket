@@ -16,16 +16,18 @@ function App() {
 		<div className="App">
 			<Router>
 				<NavBar setUser={(e) => setUser(e)} />
-				<UserContext.Provider value={user}>
-					<Switch>
-						<Route path="/" element={<LandingPage />} />
-						<Route path="/verify" element={<VerifyPage />} />
-						<Route path="/profile" element={<ProfilePage />} />
-						<Route path="/events/" element={<EventsPage />} />
-						<Route path="/events/:eventID" element={<EventPage />} />
-						<Route path="/profile/ticket" element={<TicketPage />} />
-					</Switch>
-				</UserContext.Provider>
+				<div className="container mx-auto">
+					<UserContext.Provider value={user}>
+						<Switch>
+							<Route path="/" element={<LandingPage />} />
+							<Route path="/verify" element={<VerifyPage />} />
+							<Route path="/profile" element={<ProfilePage />} />
+							<Route path="/events/" element={<EventsPage />} />
+							<Route path="/events/:eventID" element={<EventPage />} />
+							<Route path="/profile/ticket" element={<TicketPage />} />
+						</Switch>
+					</UserContext.Provider>
+				</div>
 			</Router>
 		</div>
 	)

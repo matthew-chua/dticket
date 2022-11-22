@@ -24,23 +24,15 @@ export default function ProfilePage() {
 			title: "Adele",
 			price: "100",
 			time: "24 Mar, 18:00"
-		},
-		{
-			img: adele,
-			location: "Madison Square Garden",
-			title: "Adele",
-			price: "100",
-			time: "24 Mar, 18:00"
 		}
 	]
 	return (
-		<>
-			<div className="h-screen w-full pt-24 flex flex-col text-white">
-				<div className="text-5xl font-bold w-4/5 text-left ml-20">Your Events</div>
-
-				<div className="text-3xl font-bold w-4/5 text-left mt-5 ml-20">Upcoming</div>
-				<div className="text-xl w-4/5 text-left ml-20">Get excited for these events!</div>
-				<div className="grid grid-cols-3 gap-0 justify-items-center text-black">
+		<div className="h-screen w-full pt-36 flex flex-col justify-start items-center text-white">
+			<div className="w-4/5 pb-24">
+				<div className="text-5xl font-bold text-left">Your Events</div>
+				<div className="text-3xl font-bold text-left mt-5">Upcoming</div>
+				<div className="text-xl text-left mb-4">Get excited for these events!</div>
+				<div className="grid grid-cols-3 gap-x-10 text-black">
 					{DUMMY_DATA.map((event) => (
 						<CardUser
 							location={event.location}
@@ -52,9 +44,9 @@ export default function ProfilePage() {
 						/>
 					))}
 				</div>
-				<div className="text-3xl font-bold w-4/5 text-left mt-5 ml-20">Past</div>
-				<div className="text-xl w-4/5 text-left ml-20">Relive some good memories of previous events!</div>
-				<div className="grid grid-cols-3 gap-0 justify-items-center text-black">
+				<div className="text-3xl font-bold text-left mt-10">Past</div>
+				<div className="text-xl text-left mb-4">Relive some good memories of previous events!</div>
+				<div className="grid grid-cols-3 gap-x-10 text-black">
 					{DUMMY_DATA.map((event) => (
 						<CardUser
 							location={event.location}
@@ -67,6 +59,6 @@ export default function ProfilePage() {
 					))}
 				</div>
 			</div>
-		</>
+		</div>
 	)
 }
