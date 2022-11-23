@@ -34,12 +34,12 @@ export default function VerifyPage() {
 				<form className="flex flex-col w-4/5">
 					<div className="text-3xl mt-10 w-4/5 text-left">Contract Address</div>
 					<input
-						className="text-black mt-4 h-12 w-4/5 rounded-lg"
+						className="text-black mt-4 w-4/5 rounded-lg p-3"
 						type="text"
 						onChange={(e) => {
 							setContract(e.target.value)
 						}}></input>
-					<Button x="mt-10 w-32" text="Verify Ticket" onClick={submitHandler} />
+					<Button x="mt-10 w-40 py-3" text="Verify Ticket" onClick={submitHandler} />
 				</form>
 			</div>
 		</>

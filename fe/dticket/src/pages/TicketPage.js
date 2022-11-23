@@ -30,7 +30,7 @@ function TicketPage() {
 					onClose={onClose}
 					onSold={onSold}
 					contract={CONTRACTS.ADELENFT}
-					tokenId="7" // todo: update for demo
+					tokenId="8" // todo: update for demo
 				/>
 			) : sell === false ? (
 				<ListModal isValid={true} onClose={onClose} />
