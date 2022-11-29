@@ -1,6 +1,8 @@
 import React from "react"
 import Card from "../components/card/Card"
 import adele from "../assets/adele.png"
+import nba from "../assets/nba.jpg"
+import the1975 from "../assets/1975.jpg"
 import { Link } from "react-router-dom"
 
 export default function EventsPage() {
@@ -9,25 +11,27 @@ export default function EventsPage() {
 		{
 			img: adele,
 			eventID: "0x123",
-			location: "Madison Square Garden",
+			location: "MSG",
 			title: "Adele",
-			price: "100",
+			price: "0.03 ETH",
 			time: "24 Mar, 18:00"
 		},
 		{
-			img: adele,
+			img: the1975,
 			eventID: "0x1234",
-			location: "Madison Square Garden",
-			title: "Adele",
-			price: "100",
+			location: "Greek Theatre",
+			title: "The 1975",
+			price: "0.05 ETH",
 			time: "24 Mar, 18:00"
 		},
+	]
+	const NBA_DUMMY = [
 		{
-			img: adele,
-			eventID: "0x12345",
-			location: "Madison Square Garden",
-			title: "Adele",
-			price: "100",
+			img: nba,
+			eventID: "0x123",
+			location: "Chase Centre",
+			title: "Warriors V Lakers",
+			price: "0.02 ETH",
 			time: "24 Mar, 18:00"
 		}
 	]
@@ -53,7 +57,7 @@ export default function EventsPage() {
 
 				<h2 className="text-3xl text-left mt-8 text-white font-bold">NBA</h2>
 				<div className="grid grid-cols-3 gap-x-10 mb-24">
-					{DUMMY_DATA.map((event) => (
+					{NBA_DUMMY.map((event) => (
 						<Card
 							key={event.eventID}
 							location={event.location}

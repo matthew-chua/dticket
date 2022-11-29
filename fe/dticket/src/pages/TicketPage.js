@@ -30,7 +30,7 @@ function TicketPage() {
 					onClose={onClose}
 					onSold={onSold}
 					contract={CONTRACTS.ADELENFT}
-					tokenId="8" // todo: update for demo
+					tokenId="20" // todo: update for demo
 				/>
 			) : sell === false ? (
 				<ListModal isValid={true} onClose={onClose} />
@@ -42,8 +42,8 @@ function TicketPage() {
 							<img className="h-full w-full rounded-t-lg" src={adele} alt="adele" />
 						</div>
 						<div className="font-bold text-xl mt-4">Adele</div>
-						<div>Berkeley, CA</div>
-						<div>24 Mar, 08:00</div>
+						<div>MSG</div>
+						<div>24 Mar, 18:00</div>
 					</div>
 					<div className="h-full w-1/2 bg-white rounded-lg flex justify-center items-center">
 						<img src={qr} className="h-2/3 w-2/3" alt="qr" />

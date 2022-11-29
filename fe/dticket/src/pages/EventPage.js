@@ -10,41 +10,29 @@ export default function EventPage() {
 		img: adele,
 		eventName: "Rolling in the Deep",
 		eventID: "0x123",
-		location: "Madison Square Garden",
+		location: "MSG",
 		title: "Adele",
-		price: "100",
+		price: "0.00001 ETH",
 		time: "24 Mar, 18:00",
-		state: "San Francisco, CA"
+		state: "NYC, NY"
 	}
 
 	const OG_TICKETS = [
 		{
-			date: "17th Oct",
-			time: "Sat 7:00pm",
+			date: "24th Mar",
+			time: "Sat 18:00",
 			type: "General Admissions",
-			price: "0.02 ETH"
-		},
-		{
-			date: "17th Oct",
-			time: "Sat 7:00pm",
-			type: "General Admissions",
-			price: null
+			price: "0.00000 ETH"
 		}
 	]
 
 	const RESALE_TICKETS = [
 		{
-			date: "18th Oct",
-			time: "Sat 7:00pm",
+			date: "24th Mar",
+			time: "Sat 18:00",
 			type: "General Admissions",
-			price: "0.04 ETH"
+			price: "0.00001 ETH"
 		},
-		{
-			date: "18th Oct",
-			time: "Sat 7:00pm",
-			type: "General Admissions",
-			price: null
-		}
 	]
 
 	const ACTIVE_STYLE = "cursor-pointer hover:underline mx-4"

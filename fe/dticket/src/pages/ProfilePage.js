@@ -1,28 +1,25 @@
 import React from "react"
 import CardUser from "../components/card/CardUser"
 import adele from "../assets/adele.png"
+import nba from "../assets/nba.jpg"
 
 export default function ProfilePage() {
 	const DUMMY_DATA = [
 		{
 			img: adele,
-			location: "Madison Square Garden",
+			location: "MSG",
 			title: "Adele",
 			price: "100",
 			time: "24 Mar, 18:00"
 		},
+	]
+	const NBA_DUMMY = [
 		{
-			img: adele,
-			location: "Madison Square Garden",
-			title: "Adele",
-			price: "100",
-			time: "24 Mar, 18:00"
-		},
-		{
-			img: adele,
-			location: "Madison Square Garden",
-			title: "Adele",
-			price: "100",
+			img: nba,
+			eventID: "0x123",
+			location: "Chase Centre",
+			title: "Warriors V Lakers",
+			price: "0.02 ETH",
 			time: "24 Mar, 18:00"
 		}
 	]
@@ -47,7 +44,7 @@ export default function ProfilePage() {
 				<div className="text-3xl font-bold text-left mt-10">Past</div>
 				<div className="text-xl text-left mb-4">Relive some good memories of previous events!</div>
 				<div className="grid grid-cols-3 gap-x-10 text-black">
-					{DUMMY_DATA.map((event) => (
+					{NBA_DUMMY.map((event) => (
 						<CardUser
 							location={event.location}
 							img={event.img}

@@ -1,7 +1,7 @@
 function Card(props) {
 	return (
-		<div className="box-content my-4 bg-white rounded-2xl flex flex-col justify-start items-center shadow-lg shadow-gray-800 hover:shadow-gray-700/50 cursor-pointer">
-			<img src={props.img} className="box-content w-full rounded-t-2xl" alt="card img" />
+		<div className="box-content my-4 bg-white rounded-2xl flex flex-col justify-start items-center shadow-lg shadow-gray-800 hover:shadow-gray-700/50 cursor-pointer max-h-[20rem]">
+			<img src={props.img} className="w-full rounded-t-2xl max-h-[12rem]" alt="card img" />
 			<div className="w-full p-4">
 				<div className="w-full flex flex-row justify-between text-base">
 					<div>
